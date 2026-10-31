@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jung Kook | 3D Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <main class="player">
+    <header class="topbar">
+      <div class="logo"><span>♫</span> WAVEFORM</div>
+      <div class="status"><i></i> MUSIC PLAYER</div>
+    </header>
+
+    <section class="hero">
+      <div class="cover-wrap">
+        <div class="cover-glow"></div>
+
+        <!-- JUNG KOOK PHOTO: keep jungkook.jpeg beside index.html -->
+        <img
+          id="cover"
+          class="cover"
+          src="./jungkook.jpeg"
+          alt="Jung Kook"
+        >
+
+        <div id="imageError" class="image-error" hidden>
+          <span>♪</span>
+          <strong>PHOTO NOT FOUND</strong>
+          <small>Check jungkook.jpeg is in this folder.</small>
+        </div>
+
+        <div class="photo-label">JUNG KOOK · SOLO</div>
+        <div class="visualizer" id="visualizer">
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+
+      <p class="eyebrow">YOUR PERSONAL MUSIC UNIVERSE</p>
+      <h1 id="songTitle">3D</h1>
+      <p class="artist" id="artist">Jung Kook</p>
+      <p class="subtitle">Feel the beat. Live the moment.</p>
+    </section>
+
+    <section class="music-controls">
+      <div class="track-heading">
+        <span>NOW PLAYING</span>
+        <span id="trackNumber">TRACK 01</span>
+      </div>
+
+      <input id="progress" class="progress" type="range"
+        min="0" max="100" value="0" aria-label="Song progress">
+
+      <div class="time-row">
+        <span id="currentTime">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+
+      <div class="buttons">
+        <button id="shuffleBtn" class="small-btn" aria-label="Shuffle"
+          title="Shuffle">⤨</button>
+        <button id="prevBtn" class="small-btn" aria-label="Previous"
+          title="Previous song">|◀</button>
+        <button id="playBtn" class="play-btn" aria-label="Play"
+          title="Play">▶</button>
+        <button id="nextBtn" class="small-btn" aria-label="Next"
+          title="Next song">▶|</button>
+        <button id="repeatBtn" class="small-btn" aria-label="Repeat"
+          title="Repeat">↻</button>
+      </div>
+
+      <div class="volume-row">
+        <span>🔈</span>
+        <input id="volume" type="range" min="0" max="100"
+          value="70" aria-label="Volume">
+        <span>🔊</span>
+        <button id="muteBtn">MUTE</button>
+      </div>
+
+      <div class="playlist-heading">
+        <div>
+          <h2>Your Playlist</h2>
+          <p>Jung Kook favourites</p>
+        </div>
+        <span class="music-note">♫</span>
+      </div>
+
+      <div id="playlist" class="playlist"></div>
+
+      <footer>
+        <span>MADE WITH ♡ FOR MUSIC</span>
+        <span>WAVEFORM · 2026</span>
+      </footer>
+    </section>
+
+    <audio id="audio" preload="metadata"></audio>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
